@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nosso Amor Eterno</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/6d2da70178.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="shortcut icon" href="img/love.svg" type="image/x-icon">
+</head>
+
+<body>
+  <div class="open" id="openBtn">
+    <img src="./img/music-icon.svg" alt="música" id="musicImage">
+  </div>
+  <div class="glass-container" id="glass-container" style="left: -550px;">
+    <div class="nodisplay">
+      <div class="imgs">
+        <img class="img"
+          src="https://images.pexels.com/photos/5412/water-blue-ocean.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+          alt="">
+        <img class="img"
+          src="https://images.pexels.com/photos/175773/pexels-photo-175773.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+          alt="">
+        <img class="img"
+          src="https://images.pexels.com/photos/1546249/pexels-photo-1546249.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+          alt="">
+        <img class="img"
+          src="https://images.pexels.com/photos/1591252/pexels-photo-1591252.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+          alt="">
+        <img class="img"
+          src="https://images.pexels.com/photos/287229/pexels-photo-287229.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+          alt="">
+        <img class="img"
+          src="https://images.pexels.com/photos/53135/hydrangea-blossom-bloom-flower-53135.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+          alt="">
+        <img class="img"
+          src="https://images.pexels.com/photos/73873/star-clusters-rosette-nebula-star-galaxies-73873.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+          alt="">
+        <img class="img"
+          src="https://images.pexels.com/photos/1819650/pexels-photo-1819650.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+          alt="">
+        <img class="img"
+          src="https://images.pexels.com/photos/3029545/pexels-photo-3029545.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+          alt="">
+        <img class="img"
+          src="https://images.pexels.com/photos/114979/pexels-photo-114979.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+          alt="">
+      </div>
+    </div>
+
+
+
+    <div class="MP3container">
+      <div class="header-wrapper">
+        <div class="sbtn back">
+          <svg width="20px" height="20px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 486.975 486.975">
+            <path d="M473.475,230.025h-427.4l116-116c5.3-5.3,5.3-13.8,0-19.1c-5.3-5.3-13.8-5.3-19.1,0l-139,139c-5.3,5.3-5.3,13.8,0,19.1
+l139,139c2.6,2.6,6.1,4,9.5,4s6.9-1.3,9.5-4c5.3-5.3,5.3-13.8,0-19.1l-116-116h427.5c7.5,0,13.5-6,13.5-13.5
+S480.975,230.025,473.475,230.025z" />
+          </svg>
+        </div>
+        <div id="songState" class="songState">
+          conectando...
+        </div>
+        <div class="sbtn" id="closeBtn">
+          <svg width="20px" height="20px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 150">
+            <path d="M15 15 L135 135" stroke="black" stroke-width="30" stroke-linecap="round" />
+            <path d="M135 15 L15 135" stroke="black" stroke-width="30" stroke-linecap="round" />
+          </svg>
+
+        </div>
+      </div>
+      <div class="img-container">
+        <img id="thumbnail" src="./public/images/pexels-jot-2179483.jpg" alt="">
+      </div>
+      <div class="song-info">
+        <div id="songTitle" class="title">Carregando a Música...</div>
+        <div id="songAuthor" title="Verifique sua conexão se estiver demorando muito." class="author">Verifique sua conexão se estiver demorando muito.</div>
+      </div>
+      <label class="slider">
+        <input type="range" class="level" id="volumeControl" min="0" max="1" step="0.01" value="0.5">
+        <svg class="volume" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink"
+          width="512" height="512" x="0" y="0" viewBox="0 0 24 24" style="enable-background:new 0 0 512 512"
+          xml:space="preserve">
+          <g>
+            <path
+              d="M18.36 19.36a1 1 0 0 1-.705-1.71C19.167 16.148 20 14.142 20 12s-.833-4.148-2.345-5.65a1 1 0 1 1 1.41-1.419C20.958 6.812 22 9.322 22 12s-1.042 5.188-2.935 7.069a.997.997 0 0 1-.705.291z"
+              fill="currentColor" data-original="#000000"></path>
+            <path
+              d="M15.53 16.53a.999.999 0 0 1-.703-1.711C15.572 14.082 16 13.054 16 12s-.428-2.082-1.173-2.819a1 1 0 1 1 1.406-1.422A6 6 0 0 1 18 12a6 6 0 0 1-1.767 4.241.996.996 0 0 1-.703.289zM12 22a1 1 0 0 1-.707-.293L6.586 17H4c-1.103 0-2-.897-2-2V9c0-1.103.897-2 2-2h2.586l4.707-4.707A.998.998 0 0 1 13 3v18a1 1 0 0 1-1 1z"
+              fill="currentColor" data-original="#000000"></path>
+          </g>
+        </svg>
+      </label>
+      <div class="range-wrapper">
+        <span id="songCurrentTime" class="text-gradient">00:00</span>
+        <div id="waveform"></div>
+        <span id="songDuration" class="opacity50">00:00</span>
+      </div>
+      <div class="controller">
+        <div id="previousBtn" class="sbtn">
+          <svg width="20px" height="20px" style="transform: scale(-1);" viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M21 4C21 3.44772 20.5523 3 20 3C19.4477 3 19 3.44772 19 4V20C19 20.5523 19.4477 21 20 21C20.5523 21 21 20.5523 21 20V4Z" />
+            <path
+              d="M3 4.94743C3 3.5226 4.61175 2.69498 5.7697 3.52521L16.2394 11.0318C17.2443 11.7523 17.2053 13.2593 16.1646 13.927L5.69492 20.6434C4.53019 21.3905 3 20.5542 3 19.1704V4.94743Z" />
+          </svg>
+        </div>
+        <div id="playBtn" class="sbtn mbtn">
+          <svg id="playSVG" width="26px" height="26px" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M133,440a35.37,35.37,0,0,1-17.5-4.67c-12-6.8-19.46-20-19.46-34.33V111c0-14.37,7.46-27.53,19.46-34.33a35.13,35.13,0,0,1,35.77.45L399.12,225.48a36,36,0,0,1,0,61L151.23,434.88A35.5,35.5,0,0,1,133,440Z" />
+          </svg>
+          <svg id="pauseSVG" width="20px" height="20px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 47.607 47.607">
+            <path d="M17.991,40.976c0,3.662-2.969,6.631-6.631,6.631l0,0c-3.662,0-6.631-2.969-6.631-6.631V6.631C4.729,2.969,7.698,0,11.36,0
+            l0,0c3.662,0,6.631,2.969,6.631,6.631V40.976z" />
+            <path d="M42.877,40.976c0,3.662-2.969,6.631-6.631,6.631l0,0c-3.662,0-6.631-2.969-6.631-6.631V6.631
+            C29.616,2.969,32.585,0,36.246,0l0,0c3.662,0,6.631,2.969,6.631,6.631V40.976z" />
+          </svg>
+        </div>
+        <div id="nextBtn" class="sbtn">
+          <svg width="20px" height="20px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M21 4C21 3.44772 20.5523 3 20 3C19.4477 3 19 3.44772 19 4V20C19 20.5523 19.4477 21 20 21C20.5523 21 21 20.5523 21 20V4Z" />
+            <path
+              d="M3 4.94743C3 3.5226 4.61175 2.69498 5.7697 3.52521L16.2394 11.0318C17.2443 11.7523 17.2053 13.2593 16.1646 13.927L5.69492 20.6434C4.53019 21.3905 3 20.5542 3 19.1704V4.94743Z" />
+          </svg>
+        </div>
+      </div>
+      <div class="footer-wrapper">
+        <div id="loop" title="No Loop!" class="">
+          <svg id="loopSVG" width="20px" height="20px" viewBox="0 0 8 8" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" style="stop-color:rgba(98,74,255,1);stop-opacity:1" />
+                <stop offset="100%" style="stop-color:rgba(193,46,251,1);stop-opacity:1" />
+              </linearGradient>
+            </defs>
+            <path
+              d="M6 0v1h-5c-.55 0-1 .45-1 1v1h1v-1h5v1l2-1.5-2-1.5zm-4 4l-2 1.5 2 1.5v-1h5c.55 0 1-.45 1-1v-1h-1v1h-5v-1z" />
+          </svg>
+        </div>
+        <div id="heart" class="">
+          <svg id="heart-empty" width="24px" height="24px" xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 217.408 217.408">
+            <path d="M194.078,22.682c-10.747-8.193-22.606-12.348-35.248-12.348c-15.951,0-33.181,6.808-50.126,19.754
+               C91.759,17.142,74.529,10.334,58.578,10.334c-12.642,0-24.501,4.155-35.248,12.348C7.606,34.671-0.24,49.8,0.006,67.648
+               c0.846,61.117,100.093,133.233,104.317,136.273l4.381,3.153l4.381-3.153c4.225-3.04,103.472-75.156,104.317-136.273
+               C217.648,49.8,209.802,34.671,194.078,22.682z M153.833,149.017c-18.374,18.48-36.915,33.188-45.129,39.453
+               c-8.214-6.265-26.755-20.972-45.129-39.453c-31.479-31.661-48.274-59.873-48.57-81.585c-0.178-13.013,5.521-23.749,17.421-32.822
+               c8.073-6.156,16.872-9.277,26.152-9.277c17.563,0,34.338,10.936,45.317,20.11l4.809,4.018l4.809-4.018
+               c10.979-9.174,27.754-20.11,45.317-20.11c9.28,0,18.079,3.121,26.152,9.277c11.9,9.073,17.599,19.809,17.421,32.822
+               C202.107,89.145,185.311,117.356,153.833,149.017z" />
+          </svg>
+          <svg id="heart-full" width="24px" height="24px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 472.7 472.7">
+            <defs>
+              <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" style="stop-color:rgb(255, 74, 186);stop-opacity:1" />
+                <stop offset="100%" style="stop-color:rgba(193,46,251,1);stop-opacity:1" />
+              </linearGradient>
+            </defs>
+            <path fill="url(#grad)" id="XMLID_810_" d="M433.5,67c-25.3-25.3-59-39.3-94.8-39.3s-69.6,14-94.9,39.4l-7.3,7.3l-7.5-7.5
+c-25.4-25.4-59.1-39.4-95-39.4c-35.8,0-69.4,13.9-94.7,39.3C13.9,92.2,0,125.9,0,161.7s14,69.5,39.4,94.8l182.7,182.7
+c3.8,3.8,9,6,14.5,6c5.4,0,10.6-2.2,14.5-6l182.2-182.4c25.4-25.4,39.3-59.1,39.4-94.9S458.8,92.4,433.5,67z M132.5,117.2
+c-23.9,0-43.4,19.5-43.4,43.4c0,11-8.9,19.9-19.9,19.9s-19.9-8.9-19.9-19.9c0-45.8,37.3-83.1,83.1-83.1c11,0,19.9,8.9,19.9,19.9
+C152.4,108.4,143.5,117.2,132.5,117.2z" />
+          </svg>
+        </div>
+        <div id="shuffle" title="Not shuffled" class="">
+          <svg width="24px" height="24px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <rect width="24" height="24" transform="rotate(180 12 12)" opacity="0" />
+            <path
+              d="M18 9.31a1 1 0 0 0 1 1 1 1 0 0 0 1-1V5a1 1 0 0 0-1-1h-4.3a1 1 0 0 0-1 1 1 1 0 0 0 1 1h1.89L12 10.59 6.16 4.76a1 1 0 0 0-1.41 1.41L10.58 12l-6.29 6.29a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0L18 7.42z" />
+            <path
+              d="M19 13.68a1 1 0 0 0-1 1v1.91l-2.78-2.79a1 1 0 0 0-1.42 1.42L16.57 18h-1.88a1 1 0 0 0 0 2H19a1 1 0 0 0 1-1.11v-4.21a1 1 0 0 0-1-1z" />
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <header>
+      <h1>Nosso Tempo, Nosso Amor Para Sempre 💖❤️💖❤️💖❤️💖</h1>
+    </header>
+
+    <section class="countdown-section">
+      <h2>Estamos juntos há:</h2>
+      <div class="countdown">
+        <div class="time-box"><i class="fas fa-heart"> </i><span id="years"></span></div>
+        <div class="time-box"><i class="fas fa-calendar-alt"> </i><span id="months"></span></div>
+        <div class="time-box"><i class="fas fa-sun"> </i><span id="days"></span></div>
+        <div class="time-box"><i class="fas fa-clock"> </i><span id="hours"></span></div>
+        <div class="time-box"><i class="fas fa-hourglass-half"> </i><span id="minutes"></span></div>
+        <div class="time-box"><i class="fas fa-heartbeat"> </i><span id="seconds"></span></div>
+      </div>
+      <p class="date-start">Juntos desde: 30/06/2022</p>
+    </section>
+
+    <section class="photos">
+      <h2>Momentos Inesquecíveis</h2>
+      <div class="photo-container">
+        <img src="img/83.webp" alt="foto1" class="photo active" />
+        <img src="img/29.webp" alt="foto2" class="photo" />
+        <img src="img/27.webp" alt="foto3" class="photo" />
+      </div>
+    </section>
+
+
+    <section class="quotes">
+      <h2>Mensagens de Amor</h2><br>
+      <blockquote>"O amor não se vê com os olhos, mas com o coração." – <i>William Shakespeare</i></blockquote><br>
+      <blockquote>"Você é a melhor parte da minha vida."</blockquote><br>
+      <blockquote>"Cada segundo ao seu lado vale uma eternidade de felicidade."</blockquote><br>
+      <blockquote>"Você me faz sorrir mesmo nos dias mais difíceis."</blockquote><br>
+      <blockquote>"Nosso amor cresce a cada dia, assim como nossas memórias."</blockquote>
+    </section>
+
+    <section class="future-plans">
+      <h2>Nossos Sonhos</h2>
+      <ul>
+        <li>Ter um cachorrinho (de preferência um Golden) 🐶</li>
+        <li>Construir nossa casa dos sonhos 🏡</li>
+        <li>Casamento inesquecível 💍</li>
+        <li>Viagens Românticas 🚗</li>
+        <li>Ter uma linda família 👶</li>
+        <li>Envelhecer juntos ❤️</li>
+      </ul>
+    </section>
+
+    <section class="gallery">
+      <h2>Momentos Especiais</h2><br>
+      <div class="gallery-container">
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="img/1.webp" alt="foto1"></div>
+            <div class="swiper-slide"><img src="img/2.webp" alt="foto2"></div>
+            <div class="swiper-slide"><img src="img/3.webp" alt="foto3"></div>
+            <div class="swiper-slide"><img src="img/4.webp" alt="foto4"></div>
+            <div class="swiper-slide"><img src="img/5.webp" alt="foto5"></div>
+            <div class="swiper-slide"><img src="img/6.webp" alt="foto6"></div>
+            <div class="swiper-slide"><img src="img/7.webp" alt="foto7"></div>
+            <div class="swiper-slide"><img src="img/8.webp" alt="foto8"></div>
+            <div class="swiper-slide"><img src="img/9.webp" alt="foto9"></div>
+            <div class="swiper-slide"><img src="img/10.webp" alt="foto10"></div>
+            <div class="swiper-slide"><img src="img/11.webp" alt="foto11"></div>
+            <div class="swiper-slide"><img src="img/12.webp" alt="foto12"></div>
+            <div class="swiper-slide"><img src="img/13.webp" alt="foto13"></div>
+            <div class="swiper-slide"><img src="img/14.webp" alt="foto14"></div>
+            <div class="swiper-slide"><img src="img/15.webp" alt="foto15"></div>
+            <div class="swiper-slide"><img src="img/16.webp" alt="foto16"></div>
+            <div class="swiper-slide"><img src="img/17.webp" alt="foto17"></div>
+            <div class="swiper-slide"><img src="img/18.webp" alt="foto18"></div>
+            <div class="swiper-slide"><img src="img/19.webp" alt="foto19"></div>
+            <div class="swiper-slide"><img src="img/20.webp" alt="foto20"></div>
+            <div class="swiper-slide"><img src="img/21.webp" alt="foto21"></div>
+            <div class="swiper-slide"><img src="img/22.webp" alt="foto22"></div>
+            <div class="swiper-slide"><img src="img/23.webp" alt="foto23"></div>
+            <div class="swiper-slide"><img src="img/24.webp" alt="foto24"></div>
+            <div class="swiper-slide"><img src="img/25.webp" alt="foto25"></div>
+            <div class="swiper-slide"><img src="img/26.webp" alt="foto26"></div>
+            <div class="swiper-slide"><img src="img/27.webp" alt="foto27"></div>
+            <div class="swiper-slide"><img src="img/28.webp" alt="foto28"></div>
+            <div class="swiper-slide"><img src="img/29.webp" alt="foto29"></div>
+            <div class="swiper-slide"><img src="img/30.webp" alt="foto30"></div>
+            <div class="swiper-slide"><img src="img/31.webp" alt="foto31"></div>
+            <div class="swiper-slide"><img src="img/32.webp" alt="foto32"></div>
+            <div class="swiper-slide"><img src="img/33.webp" alt="foto33"></div>
+            <div class="swiper-slide"><img src="img/34.webp" alt="foto34"></div>
+            <div class="swiper-slide"><img src="img/35.webp" alt="foto35"></div>
+            <div class="swiper-slide"><img src="img/36.webp" alt="foto36"></div>
+            <div class="swiper-slide"><img src="img/37.webp" alt="foto37"></div>
+            <div class="swiper-slide"><img src="img/38.webp" alt="foto38"></div>
+            <div class="swiper-slide"><img src="img/39.webp" alt="foto39"></div>
+            <div class="swiper-slide"><img src="img/40.webp" alt="foto40"></div>
+            <div class="swiper-slide"><img src="img/41.webp" alt="foto41"></div>
+            <div class="swiper-slide"><img src="img/42.webp" alt="foto42"></div>
+            <div class="swiper-slide"><img src="img/43.webp" alt="foto43"></div>
+            <div class="swiper-slide"><img src="img/44.webp" alt="foto44"></div>
+            <div class="swiper-slide"><img src="img/45.webp" alt="foto45"></div>
+            <div class="swiper-slide"><img src="img/46.webp" alt="foto46"></div>
+            <div class="swiper-slide"><img src="img/47.webp" alt="foto47"></div>
+            <div class="swiper-slide"><img src="img/48.webp" alt="foto48"></div>
+            <div class="swiper-slide"><img src="img/49.webp" alt="foto49"></div>
+            <div class="swiper-slide"><img src="img/50.webp" alt="foto50"></div>
+            <div class="swiper-slide"><img src="img/51.webp" alt="foto51"></div>
+            <div class="swiper-slide"><img src="img/52.webp" alt="foto52"></div>
+            <div class="swiper-slide"><img src="img/53.webp" alt="foto53"></div>
+            <div class="swiper-slide"><img src="img/54.webp" alt="foto54"></div>
+            <div class="swiper-slide"><img src="img/55.webp" alt="foto55"></div>
+            <div class="swiper-slide"><img src="img/56.webp" alt="foto56"></div>
+            <div class="swiper-slide"><img src="img/57.webp" alt="foto57"></div>
+            <div class="swiper-slide"><img src="img/58.webp" alt="foto58"></div>
+            <div class="swiper-slide"><img src="img/59.webp" alt="foto59"></div>
+            <div class="swiper-slide"><img src="img/60.webp" alt="foto60"></div>
+            <div class="swiper-slide"><img src="img/61.webp" alt="foto61"></div>
+            <div class="swiper-slide"><img src="img/62.webp" alt="foto62"></div>
+            <div class="swiper-slide"><img src="img/63.webp" alt="foto63"></div>
+            <div class="swiper-slide"><img src="img/64.webp" alt="foto64"></div>
+            <div class="swiper-slide"><img src="img/65.webp" alt="foto65"></div>
+            <div class="swiper-slide"><img src="img/66.webp" alt="foto66"></div>
+            <div class="swiper-slide"><img src="img/67.webp" alt="foto67"></div>
+            <div class="swiper-slide"><img src="img/68.webp" alt="foto68"></div>
+            <div class="swiper-slide"><img src="img/69.webp" alt="foto69"></div>
+            <div class="swiper-slide"><img src="img/70.webp" alt="foto70"></div>
+            <div class="swiper-slide"><img src="img/71.webp" alt="foto71"></div>
+            <div class="swiper-slide"><img src="img/72.webp" alt="foto72"></div>
+            <div class="swiper-slide"><img src="img/73.webp" alt="foto73"></div>
+            <div class="swiper-slide"><img src="img/74.webp" alt="foto74"></div>
+            <div class="swiper-slide"><img src="img/75.webp" alt="foto75"></div>
+            <div class="swiper-slide"><img src="img/76.webp" alt="foto76"></div>
+            <div class="swiper-slide"><img src="img/77.webp" alt="foto77"></div>
+            <div class="swiper-slide"><img src="img/78.webp" alt="foto78"></div>
+            <div class="swiper-slide"><img src="img/79.webp" alt="foto79"></div>
+            <div class="swiper-slide"><img src="img/80.webp" alt="foto80"></div>
+            <div class="swiper-slide"><img src="img/81.webp" alt="foto81"></div>
+            <div class="swiper-slide"><img src="img/82.webp" alt="foto82"></div>
+            <div class="swiper-slide"><img src="img/83.webp" alt="foto83"></div>
+            <div class="swiper-slide"><img src="img/84.webp" alt="foto84"></div>
+            <div class="swiper-slide"><img src="img/85.webp" alt="foto85"></div>
+            <div class="swiper-slide"><img src="img/86.webp" alt="foto86"></div>
+            <div class="swiper-slide"><img src="img/87.webp" alt="foto87"></div>
+            <div class="swiper-slide"><img src="img/88.webp" alt="foto88"></div>
+            <div class="swiper-slide"><img src="img/89.webp" alt="foto89"></div>
+            <div class="swiper-slide"><img src="img/90.webp" alt="foto90"></div>
+            <div class="swiper-slide"><img src="img/91.webp" alt="foto91"></div>
+            <div class="swiper-slide"><img src="img/92.webp" alt="foto92"></div>
+            <div class="swiper-slide"><img src="img/93.webp" alt="foto93"></div>
+            <div class="swiper-slide"><img src="img/94.webp" alt="foto94"></div>
+            <div class="swiper-slide"><img src="img/95.webp" alt="foto95"></div>
+            <div class="swiper-slide"><img src="img/96.webp" alt="foto96"></div>
+            <div class="swiper-slide"><img src="img/97.webp" alt="foto97"></div>
+            <div class="swiper-slide"><img src="img/98.webp" alt="foto98"></div>
+            <div class="swiper-slide"><img src="img/99.webp" alt="foto99"></div>
+            <div class="swiper-slide"><img src="img/100.webp" alt="foto100"></div>
+            <div class="swiper-slide"><img src="img/101.webp" alt="foto101"></div>
+            <div class="swiper-slide"><img src="img/102.webp" alt="foto102"></div>
+            <div class="swiper-slide"><img src="img/103.webp" alt="foto103"></div>
+            <div class="swiper-slide"><img src="img/104.webp" alt="foto104"></div>
+            <div class="swiper-slide"><img src="img/105.webp" alt="foto105"></div>
+            <div class="swiper-slide"><img src="img/106.webp" alt="foto106"></div>
+            <div class="swiper-slide"><img src="img/107.webp" alt="foto107"></div>
+            <div class="swiper-slide"><img src="img/108.webp" alt="foto108"></div>
+            <div class="swiper-slide"><img src="img/109.webp" alt="foto109"></div>
+            <div class="swiper-slide"><img src="img/110.webp" alt="foto110"></div>
+            <div class="swiper-slide"><img src="img/111.webp" alt="foto111"></div>
+            <div class="swiper-slide"><img src="img/112.webp" alt="foto112"></div>
+            <div class="swiper-slide"><img src="img/113.webp" alt="foto113"></div>
+          </div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <p>Te amo para sempre! <i class="fas fa-heart"></i></p>
+      <p>Tem mais uma surpresa pra vc 💖</p><br>
+      <a href="./flowers.html"><button>Ver Surpresa</button></a>
+    </footer>
+  </div>
+  <script src="https://unpkg.com/wavesurfer.js"></script>
+  <script src="script.js"></script>
+  <script src="player.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      slidesPerView: "auto",
+      spaceBetween: 20,
+      freeMode: true,
+      loop: true,
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+  </script>
+</body>
+
+</html>
